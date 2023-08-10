@@ -213,27 +213,27 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
     {
       id: 1,
       name: "EVENT INFO",
-      link: "https://www.google.com",
+      link: "https://register.walkwithfriendship.com/Static/event-info",
     },
     {
       id: 2,
       name: "REGISTER TO WALK",
-      link: "https://www.google.com",
+      link: "https://register.walkwithfriendship.com/Account/Register",
     },
     {
       id: 3,
-      name: "LOG YOUR KINDNESS",
-      link: "https://www.google.com",
+      name: "CREATE A TEAM",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfTxepm2_w62QVj_e6krltidlOrtytVUmfi777m-ULjoYAh9A/viewform?usp=sf_link",
     },
     {
       id: 4,
       name: "DONATE",
-      link: "https://www.google.com",
+      link: "https://register.walkwithfriendship.com/Donate",
     },
     {
       id: 5,
       name: "KINDNESS IDEAS",
-      link: "https://www.google.com",
+      link: "https://register.walkwithfriendship.com/Static/actsofkindness",
     },
   ];
 
@@ -554,7 +554,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
         )}
         <div className="flex justify-center items-center">
           <button
-            onClick={() => router.push("https://www.google.com/")}
+            onClick={() => router.push("https://register.walkwithfriendship.com/Static/sponsors")}
             className="centered-btn"
           >
             Become a Sponsor
