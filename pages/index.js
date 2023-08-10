@@ -264,7 +264,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
         />
       )}
       {/* Form  */}
-      <title>Plegde App</title>
+      <title>Walk With Friendship</title>
       <section>
         <div
           id="hero"
