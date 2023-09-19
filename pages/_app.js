@@ -3,6 +3,7 @@ import CustomToastContainer from "../components/ToastContainer";
 import "react-toastify/dist/ReactToastify.css";
 import { useState, useEffect } from "react";
 import Router from "next/router";
+import Head from "next/head";
 
 function Loading() {
   const [loading, setLoading] = useState(false);
@@ -52,6 +53,11 @@ const LoaderIcon = ({ size }) => (
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>Mitzvahs for Shaina</title>
+        <link rel="icon" href="/new-favicon.jpg" />
+        {/* Add other meta tags, styles, and scripts here */}
+      </Head>
       <Loading />
       <Component {...pageProps} />
       <CustomToastContainer />

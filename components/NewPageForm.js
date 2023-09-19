@@ -9,7 +9,7 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
     firstName: "",
     lastName: "",
     mitzvah: "",
-    campaign: 1,
+    campaign: 2,
     amount: 1,
     team: 1,
     email: "",
@@ -23,12 +23,13 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
     const currentTime = new Date();
     const formattedTime = currentTime.toISOString();
     const payload = {
-      id: 1,
+      id: 2,
       first_name: state.firstName,
       last_name: state.lastName,
       anonymous: state.anonymous,
       mitzvah: state.mitzvah,
-      campaign: Number(state.campaign),
+      // campaign: Number(state.campaign),
+      campaign: 2,
       amount: Number(state.amount),
       team: numTeamID,
       email: state.email,
@@ -60,7 +61,7 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
           >
             <Image
               className="bg-contain cursor-pointer"
-              src="/remove.png"
+              src="/green-cross.png"
               height={25}
               width={25}
               alt="cross-button"
@@ -131,7 +132,7 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
           </div>
 
           <div className="relative z-0 w-full mb-6 group">
-            <input
+            <select
               type="mitzvah"
               name="mitzvah"
               id="floating_email"
@@ -140,7 +141,15 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
               required
               value={state.mitzvah}
               onChange={(e) => handleChange(e)}
-            />
+            >
+              <option value="">Select a mitzvah</option>
+              <option>I will light Shabbat Candles</option>
+              <option>I will give Charity</option>
+              <option>I will perform a Random Act of Kindness</option>
+              <option>I will visit the sick</option>
+              <option>I will recite Tehillim (Psalms)</option>
+              <option>I will put on Tefillin</option>
+            </select>
             <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
               Pledge
             </label>
@@ -162,7 +171,7 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
             </label>
           </div>
 
-          <div className="relative z-0 w-full mb-6 group">
+          {/* <div className="relative z-0 w-full mb-6 group">
             <select
               type="number"
               name="team"
@@ -179,12 +188,12 @@ const NewPageForm = ({ handleCrossButton, onSubmit }) => {
             <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
               Team
             </label>
-          </div>
+          </div> */}
 
           <div className="relative z-0 w-full  group  flex items-end justify-end">
             <button
               type="submit"
-              className=" text-white bg-[#E97848] hover:bg-[#ed895e] focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+              className=" text-white bg-[#005303]  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
               Submit
             </button>

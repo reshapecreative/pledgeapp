@@ -123,27 +123,27 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
     {
       id: 1,
       name: "EVENT INFO",
-      link: "https://register.walkwithfriendship.com/Static/event-info",
+      link: "https://www.google.com",
     },
     {
       id: 2,
       name: "REGISTER TO WALK",
-      link: "https://register.walkwithfriendship.com/Account/Register",
+      link: "https://www.google.com",
     },
     {
       id: 3,
-      name: "CREATE A TEAM",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLSfTxepm2_w62QVj_e6krltidlOrtytVUmfi777m-ULjoYAh9A/viewform?usp=sf_link",
+      name: "LOG YOUR KINDNESS",
+      link: "https://www.google.com",
     },
     {
       id: 4,
       name: "DONATE",
-      link: "https://register.walkwithfriendship.com/Donate",
+      link: "https://www.google.com",
     },
     {
       id: 5,
       name: "KINDNESS IDEAS",
-      link: "https://register.walkwithfriendship.com/Static/actsofkindness",
+      link: "https://www.google.com",
     },
   ];
 
@@ -179,7 +179,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
         mitzvah: payload.mitzvah,
         campaign: payload.campaign,
         amount: payload.amount,
-        team: payload.team,
+        // team: payload.team,
         timestamp: payload.timestamp,
       };
 
@@ -217,20 +217,20 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
         />
       )}
       {/* Form  */}
-      <title>Plegde App</title>
+      <title>Mitzvahs for Shaina</title>
       <section>
         <div className="flex flex-col relative">
           <div
             id="hero"
-            className="md:h-[44vh] h-[50vh] md:px-0 px-8 w-full bg-[#E97848CC] m-auto flex justify-center items-center flex-col"
+            className="md:h-[44vh] h-[50vh] md:px-0 px-8 w-full bg-[#008D05] m-auto flex justify-center items-center flex-col"
           >
-            <Image
+            {/* <Image
               src="/heading.png"
               className=""
               width={500}
               height={800}
               alt="heading"
-            />
+            /> */}
             <p className="text-white font-bold text-[25px] mt-5 font-poppins">
               {headingName[0]} Team
             </p>
@@ -238,8 +238,13 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
               onClick={() => router.back()}
               className="flex bg-white px-8 py-2 items-center justify-evenly rounded-lg cursor-pointer absolute top-3 left-3"
             >
-              <Image src={"/back.png"} width={10} height={10} alt="back" />
-              <p className="text-[#E97848] text-[14px] font-poppins ml-3">
+              <Image
+                src={"/green-arrow.png"}
+                width={10}
+                height={10}
+                alt="back"
+              />
+              <p className="text-[#008D05] text-[14px] font-poppins ml-3">
                 Back to main page
               </p>
             </div>
@@ -265,7 +270,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
             ></HalfBackground> */}
             <div className="bg-[#FFFFFF] w-[40%]  rounded-2xl p-2 flex items-start justify-start ">
               <div
-                className={`bg-[#E97848] rounded-md p-2 flex justify-start`}
+                className={`bg-[#008D05] rounded-md p-2 flex justify-start`}
                 style={{
                   width: `${getFirstAPI?.data?.precent_complete}`,
                 }}
@@ -285,7 +290,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
             <div>
               <button
                 onClick={() => handleButtonClick()}
-                className="bg-[#E97848] hover:bg-[#eb6931] text-white p-1 py-2 px-6 rounded-full tracking-wider"
+                className="bg-[#008D05]  text-white p-1 py-2 px-6 rounded-full tracking-wider font-bold"
               >
                 Pledge Now!
               </button>
@@ -295,7 +300,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
       </section>
 
       {/* BUTTON SECTION */}
-      <div className="bg-white flex flex-wrap items-center justify-center py-4 w-full gap-4 md:justify-center ">
+      {/* <div className="bg-white flex flex-wrap items-center justify-center py-4 w-full gap-4 md:justify-center ">
         {buttonData.map((val) => (
           <div
             key={val.id}
@@ -307,54 +312,49 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
             </p>
           </div>
         ))}
-      </div>
+      </div> */}
       {/* BUTTON SECTION */}
 
-      <section className="bg-[#E9784836] text-[#B05C39]">
+      <section className="bg-[#D4ECD5] text-[#005303]">
         <div className=" max-w-7xl m-auto text-center md:h-fit pt-20 mb-10 md:pb-16 pb-16">
           <h1 className="md:text-[38px] text-[38px] font-[700] font-poppins]">
-            Be A Champion of Kindness!
+            Mitzvahs for Shaina
           </h1>
-          <p className="md:text-[18px] text-[19px] md:w-3/4 m-auto md:p-10 p-5 md:py-10 py-10  text-center ">
-            Thank you for supporting our mission of friendship and inclusion
-            through our Community Kindness Challenge. This year, rather than
-            raising funds, we are raising Acts of Kindness (Mitzvahs!)
-            throughout the community. Our Community Kindness Challenge
-            culminates at the walk, where our Kindness Champions will receive
-            recognition and celebration for their acts of kindness throughout
-            the community! Check out our kindness ideas list for acts of
-            kindness you can do. If you complete 5 acts of kindness within each
-            category. you will receive a limited-edition kindness merit badge!
+          <p className="md:text-[18px] text-[35px] md:w-3/4 m-auto md:p-10 p-5 md:py-10 py-10  text-center ">
+            A dear Ganeinu student Shaina bas Chana is dealing with a serious
+            medical issue and we are determined to encourage the performance of
+            thousands of Mitzvahs in the merit of a complete and speedy recovery
+            for Shaina!
           </p>
           <p className="md:text-[28px] text-[28px] font-[600] ">
-            Sunday, October 22nd, 2023
+            Please pledge a Mitzvah today,
           </p>
           <h1 className="md:text-[28px] text-[28px] font-[600]">
-            Lid Park, Mercer Island
+            share with friends and then pledge another Mitzvah!
           </h1>
         </div>
       </section>
       <section className="mb-24 mx-auto">
         {/* VIDEO SECTION */}
-        <div className="video-container flex items-center justify-center w-full mb-24 mt-14">
+        {/* <div className="video-container flex items-center justify-center w-full mb-24 mt-14">
           <iframe
             src="https://www.youtube.com/embed/NXkJ9eNpWNw"
             title="YouTube Video"
             allowFullScreen
             className="w-4/5 md:w-1/2 h-80"
           />
-        </div>
+        </div> */}
 
         {/* VIDEO SECTION */}
         {/* left side bar start from here */}
         {/* New Work HERE */}
         <div class="flex flex-col items-center sm:flex-row sm:items-center">
-          <p class="text-3xl text-[#B05C39] font-poppins font-bold sm:ml-28">
+          <p class="text-3xl text-[#005303] font-poppins font-bold sm:ml-28">
             {headingName[0]} Team Pledges
           </p>
           <div
             onClick={() => router.back()}
-            class="bg-[#B05C39] text-white text-sm rounded-full flex items-center justify-center h-8 px-2 mt-3 sm:mt-0 sm:ml-5 cursor-pointer"
+            class="bg-[#005303] text-white text-sm rounded-full flex items-center justify-center h-8 px-2 mt-3 sm:mt-0 sm:ml-5 cursor-pointer"
           >
             View all Pledges
           </div>
@@ -365,21 +365,21 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
               <>
                 <div
                   key={id}
-                  className="bg-[#FAE2D8] flex flex-col p-2 w-[85%] md:w-[25%]"
+                  className="bg-[#D4ECD5] flex flex-col p-2 w-[85%] md:w-[25%]"
                 >
                   {val.anonymous !== true ? (
-                    <p className="text-[#B05C39] font-bold font-poppins ml-2 text-[16px]">
+                    <p className="text-[#005303] font-bold font-poppins ml-2 text-[16px]">
                       {val.first_name} {val.last_name}
                     </p>
                   ) : (
-                    <p className="text-[#B05C39] font-bold font-poppins ml-2 text-[16px]">
+                    <p className="text-[#005303] font-bold font-poppins ml-2 text-[16px]">
                       {val.first_last_name}
                     </p>
                   )}
-                  <p className="text-[#B05C39] font-poppins w-[90%] text-[12px] ml-2 mt-1">
+                  <p className="text-[#005303] font-poppins w-[90%] text-[12px] ml-2 mt-1">
                     {val.mitzvah}
                   </p>
-                  <p className="text-[#B05C39]  font-poppins text-[12px]  ml-2 mt-1">
+                  <p className="text-[#005303]  font-poppins text-[13px]  ml-2 mt-1">
                     <TimeAgo time={val?.time} />
                   </p>
                 </div>
@@ -389,7 +389,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
         </div>
         {/* New Work HERE */}
       </section>
-      <section className="bg-[#E9784836] pb-14 ">
+      {/* <section className="bg-[#E9784836] pb-14 ">
         <h1 className="text-3xl font-[700] text-[40px] text-[#B05C39] text-center py-14">
           Sponsors
         </h1>
@@ -453,8 +453,8 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
         <div className="flex justify-center items-center">
           <button className="centered-btn">Become a Sponsor</button>
         </div>
-      </section>
-      <footer className="text-left bg-[#E97848] text-white lg:text-left pt-14 md:pb-8 pb-4 pl-12 tracking-wide ">
+      </section> */}
+      {/* <footer className="text-left bg-[#E97848] text-white lg:text-left pt-14 md:pb-8 pb-4 pl-12 tracking-wide ">
         <div className="container px-6 mx-auto">
           <div className="grid gap-4 lg:grid-cols-2">
             <div className="mb-6 md:mb-0">
@@ -497,7 +497,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </NewPage.Provider>
   );
 };
@@ -509,15 +509,15 @@ export async function getServerSideProps() {
   let isAPIFailed = false;
   try {
     const response = await axios.get(
-      "https://api.reshapecreative.com/mitzvahthon/campaign?id=1"
+      "https://api.reshapecreative.com/mitzvahthon/campaign?id=2"
     );
 
     const response1 = await axios.get(
-      "https://api.reshapecreative.com/mitzvahthon/mitzvahs?id=1"
+      "https://api.reshapecreative.com/mitzvahthon/mitzvahs?id=2"
     );
 
     const response2 = await axios.get(
-      "https://api.reshapecreative.com/mitzvahthon/teams?id=1"
+      "https://api.reshapecreative.com/mitzvahthon/teams?id=2"
     );
 
     // console.log("THIS IS FIRST API ", response.data);
