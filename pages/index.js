@@ -397,8 +397,8 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
                       <div
                         onClick={() => {
                           router.push({
-                            pathname: `/${firstName}-team`,
-                            query: { id: val.team },
+                            pathname: `/`,
+                            query: { id: 5 },
                           });
                         }}
                         key={id}
