@@ -17,7 +17,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
   const [isMobileView, setIsMobileView] = useState(false);
 
   const [showLatest, setShowLatest] = useState(true);
-  const [visiblePledgeCount, setVisiblePledgeCount] = useState(5);
+  const [visiblePledgeCount, setVisiblePledgeCount] = useState(9999999999);
 
   // Reverse the pledgeApi array if the showLatest state is false.
   const reversedPledgeApi = showLatest
