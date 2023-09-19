@@ -150,6 +150,8 @@ const Form = ({ handleCrossButton, onSubmit }) => {
               <option>I will study a portion of Torah</option>
               <option>I will eat Kosher</option>
               <option>I will put up a Mezzuzah</option>
+              <option>I will donate to a Jewish Educational Institution</option>
+              <option>I will buy a letter in a sefer torah</option>
             </select>
             <label className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
               Pledge
