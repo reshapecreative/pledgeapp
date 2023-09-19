@@ -136,7 +136,7 @@ const Index = ({ getFirstAPI, isAPIFailed, pledgeApi, teamApi, ...props }) => {
       // console.log(response.data);
       toast.success("Form Submitted Successfully");
       toast.success(
-        "Submission will appear in the pledges list in a few minutes"
+        "Submission will appear in the pledges list in a few minutes (around 5 minutes)"
       );
       toast.dismiss(loadingToastId);
       setSpecificShowForm(false);
